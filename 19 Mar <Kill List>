@@ -4,37 +4,43 @@
 }
 ]
 using System;
+using System.Net.Sockets;
+using System.Text;
 
 class Program
 {
     static void Main(string[] args)
     {
-        // Task 1: Print a random number
-        Random random = new Random();
-        int randomNumber = random.Next(1, 101);
-        Console.WriteLine($"Task 1: Generated a random number: {randomNumber}");
+        string serverIP = "127.0.0.1";
+        int port = 12345; // Example port number
 
-        // Simulate some work
-        System.Threading.Thread.Sleep(1000);
+        // Identifier to include in the communication
+        string identifier = "com.gameberry.ludo.star2";
 
-        // Task 2: Reverse a string
-        string originalString = "com.gameberry.ludo.star2";
-        char[] charArray = originalString.ToCharArray();
-        Array.Reverse(charArray);
-        string reversedString = new string(charArray);
-        Console.WriteLine($"Task 2: Original string: {originalString}, Reversed string: {reversedString}");
+        try
+        {
+            Console.WriteLine("Connecting to the server...");
 
-        // Simulate some work
-        System.Threading.Thread.Sleep(1000);
+            // Create a TCP client and connect to the server
+            using (TcpClient client = new TcpClient(serverIP, port))
+            {
+                Console.WriteLine("Connected to server!");
 
-  
+                // Get the network stream for communication
+                NetworkStream stream = client.GetStream();
 
-        // Simulate some work
-        System.Threading.Thread.Sleep(1000);
+                // Send the identifier to the server
+                byte[] dataToSend = Encoding.ASCII.GetBytes(identifier);
+                stream.Write(dataToSend, 0, dataToSend.Length);
+                Console.WriteLine($"Sent identifier: {identifier}");
 
-        Console.WriteLine("All tasks complete. The application will now close.");
-        
-        // Terminate the application
-        Environment.Exit(0);
+                // Close the connection gracefully
+                stream.Close();
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error: {ex.Message}");
+        }
     }
 }
