@@ -1,6 +1,6 @@
 [
 {
-"Kill" = ""
+"Password" = ""
 }
 ]
 using System;
