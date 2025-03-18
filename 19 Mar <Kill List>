@@ -1,0 +1,40 @@
+[
+{
+"Kill" = ""
+}
+]
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Task 1: Print a random number
+        Random random = new Random();
+        int randomNumber = random.Next(1, 101);
+        Console.WriteLine($"Task 1: Generated a random number: {randomNumber}");
+
+        // Simulate some work
+        System.Threading.Thread.Sleep(1000);
+
+        // Task 2: Reverse a string
+        string originalString = "com.gameberry.ludo.star2";
+        char[] charArray = originalString.ToCharArray();
+        Array.Reverse(charArray);
+        string reversedString = new string(charArray);
+        Console.WriteLine($"Task 2: Original string: {originalString}, Reversed string: {reversedString}");
+
+        // Simulate some work
+        System.Threading.Thread.Sleep(1000);
+
+  
+
+        // Simulate some work
+        System.Threading.Thread.Sleep(1000);
+
+        Console.WriteLine("All tasks complete. The application will now close.");
+        
+        // Terminate the application
+        Environment.Exit(0);
+    }
+}
