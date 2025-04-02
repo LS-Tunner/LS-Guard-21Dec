@@ -1,7 +1,7 @@
 [
 {
 "Password" = "",
-"host = '127.0.0.1' src = 'com.gameberry.ludo.starl'" : "",
+"host = '127.0.0.1' src = 'com.gameberry.ludo.starl'" : "{void}",
 "rule1": "{void}",
 "rule2" : "",
 "Version" : "1.2.10",
