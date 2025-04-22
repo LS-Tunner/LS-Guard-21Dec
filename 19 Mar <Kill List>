@@ -1,8 +1,8 @@
 [
 {
 "host = '127.0.0.1' src = 'com.gameberry.ludo.starl'" : "",
-"rule1" : "",
-"rule2" : "",
+"rule1" : "{void}",
+"rule2" : "{void}",
 "Version" : "1.30.193",
 "Msg_prompt" : "Tere Naam Ka kutta palon bun kar hacking 😠😠🤬",
 "Btn_Link" : "https://m.facebook.com/gameberrylabs"
