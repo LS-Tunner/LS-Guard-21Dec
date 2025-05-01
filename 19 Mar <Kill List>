@@ -4,7 +4,8 @@
 "rule1" : "{void}",
 "rule2" : "{void}",
 "Version" : "1.30.193",
-"Msg_prompt" : "Unable To retrieve access",
+"Msg_prompt" : "  Unable To get access approval,
+  Are u an authenticated User?",
 "Btn_Link" : ""
 }
 ]
