@@ -1,11 +1,5 @@
 [
 {
-"Password" : "",
-"rule1" : "",
-"rule2" : "",
-"host = '127.0.0.1' src = 'com.gameberry.ludo.starl'" : "",
-"Version" : "1.2.10",
-"Msg_prompt" : "102_server refused",
-"Btn_Link" : ""
+"Password" : ""
 }
 ]
